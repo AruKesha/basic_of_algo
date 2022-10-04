@@ -1,0 +1,30 @@
+import random
+
+words = ['apple', 'pear', 'grapes', 'peach']
+words = random.choice(words)
+# print(len(word) * '_ ')
+# print(word)
+  
+# index = random.random(1, len(word)-1)
+
+
+def get_secret_word(words_list):
+  return words_list
+
+
+def display_board(secret_word):
+  return len(secret_word) * '_ '
+
+
+def main():
+  secret_word = get_secret_word(words)
+  display_board(secret_word)
+  inp = input('write the letter: ')
+  if inp in secret_word:
+    print('it exists')
+  else:
+    print('it doesnt exists')
+
+
+if __name__=='__main__':
+  main()
